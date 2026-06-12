@@ -4,7 +4,6 @@ import Title from '@/components/ui/Title.vue';
 
 <template>
     <Title text="sjfbgkjdbf" theme="center"/>
-
 </template>
 
 <style scoped lang="scss">

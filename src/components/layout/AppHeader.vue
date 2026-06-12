@@ -3,7 +3,7 @@ import Logo from '@/components/ui/Logo.vue';
 import Emblem from '@/components/header/Emblem.vue';
 import Profile from '@/components/header/Profile.vue';
 import Number from '@/components/header/Number.vue';
-
+import Navbar from '@/components/header/Navbar.vue';
 </script>
 
 <template>
@@ -17,7 +17,9 @@ import Number from '@/components/header/Number.vue';
     <Profile class="profil_header"/>
 
     <Number/>
+    
   </header>
+  <Navbar/>
 </template>
 
 <style scoped lang="scss">
