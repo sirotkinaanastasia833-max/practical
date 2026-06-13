@@ -40,7 +40,7 @@ import Navbar from '@/components/header/Navbar.vue';
     margin: 20px 10px 10px 10px;
   }
   .logo{
-    margin: 10px 10px 20px 85px;
+    margin: 10px 10px 20px 220px;
   }
   .basket{
     margin: 20px 10px 10px 150px;

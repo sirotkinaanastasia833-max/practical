@@ -33,7 +33,7 @@
 .nav{
     margin-top: 13px;
     margin-bottom: 13px;
-    margin-left: 17px;
+    margin-left: 150px;
 }
 .nav-link{
     margin: 0px 70px 0px 70px;
