@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Title from '@/components/ui/Title.vue';
+import Stocks from '@/components/homep/Stocks.vue';
 </script>
 
 <template>
-    <Title text="sjfbgkjdbf" theme="center"/>
+    <Stocks />
 
 </template>
 

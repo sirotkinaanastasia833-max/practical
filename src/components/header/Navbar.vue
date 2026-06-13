@@ -33,12 +33,13 @@
 .nav{
     margin-top: 13px;
     margin-bottom: 13px;
-    margin-left: 150px;
+    margin-left: 155px;
 }
 .nav-link{
-    margin: 0px 70px 0px 70px;
+    margin: 0px 62px 0px 62px;
     color: var(--text-color);
     text-decoration: none;
     font-size: var(--text-sm);
+    font-family: var(--font-family);
 }
 </style>
