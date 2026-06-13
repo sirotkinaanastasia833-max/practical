@@ -4,22 +4,27 @@
       <div v-if="currentIndex === 0" class="slide-content">
         <p class="slide-title">Здесь будет слайдер <br>с различными акциями <br>или <a href="">специальными <br>предложениями</a></p>
         <div class="title-05">01/05</div>
+        <Button theme="full" text="Подробнее" icon="/src/assets/images/arrow.png"/>
       </div>
       <div v-if="currentIndex === 1" class="slide-content">
         <p class="slide-title">Здесь будет слайдер <br>с различными акциями <br>или <a href="">специальными <br>предложениями</a></p>
         <div class="title-05">02/05</div>
+        <Button theme="full" text="Подробнее" icon="/src/assets/images/arrow.png"/>
       </div>
       <div v-if="currentIndex === 2" class="slide-content">
         <p class="slide-title">Здесь будет слайдер <br>с различными акциями <br>или <a href="">специальными <br>предложениями</a></p>
         <div class="title-05">03/05</div>
+        <Button theme="full" text="Подробнее" icon="/src/assets/images/arrow.png"/>
       </div>
       <div v-if="currentIndex === 3" class="slide-content">
         <p class="slide-title">Здесь будет слайдер <br>с различными акциями <br>или <a href="">специальными <br>предложениями</a></p>
         <div class="title-05">04/05</div>
+        <Button theme="full" text="Подробнее" icon="/src/assets/images/arrow.png"/>
       </div>
       <div v-if="currentIndex === 4" class="slide-content">
         <p class="slide-title">Здесь будет слайдер <br>с различными акциями <br>или <a href="">специальными <br>предложениями</a></p>
         <div class="title-05">05/05</div>
+        <Button theme="full" text="Подробнее" icon="/src/assets/images/arrow.png"/>
       </div>
       <div class="dashes">
         <span 
@@ -34,8 +39,14 @@
     </div>
   </div>
 </template>
+
 <script>
+import Button from '@/components/ui/Button.vue'
+
 export default {
+  components: {
+    Button
+  },
   data() {
     return {
       currentIndex: 0,
@@ -58,6 +69,7 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 .slider {
   position: relative;
@@ -76,10 +88,12 @@ export default {
   flex-wrap: nowrap;
 }
 .slide-content {
-  color: var(--text-color);  
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;  /* Добавлено - чтобы кнопка была под текстом */
 }
-.slide-title{
-    margin: 6px 0px 0px 45px;
+.slide-title {
+  margin: 6px 0px 0px 45px;
 }
 .slide-content p {
   font-size: var(--text-3xl);
@@ -115,19 +129,27 @@ export default {
 .dash:hover {
   background: rgba(255, 255, 255, 0.8);
 }
-.slide-content a{
-    color: var(--dark-gold);
-    text-decoration: none;
+.slide-content a {
+  color: var(--dark-gold);
+  text-decoration: none;
 }
-.slide img{
-    margin-bottom: -180px;
-    margin-top: -100px;
-    width: 427px;
-    height: 460px;
-    margin-left: 100px;
+.slide img {
+  margin-bottom: -180px;
+  margin-top: -100px;
+  width: 427px;
+  height: 460px;
+  margin-left: 100px;
 }
-.title-05{
-    margin-left: 65%;
-    margin-top: 120px;
+.title-05 {
+  margin-left: 65%;
+  margin-top: 120px;
+  font-family: var(--font-family);
+  font-size: var(--text-base);
+  letter-spacing: 3px;
+}
+
+.slide-content :deep(.btn) {
+  margin-left: 45px;
+  margin-top: -115px;
 }
 </style>

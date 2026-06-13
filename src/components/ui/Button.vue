@@ -44,22 +44,22 @@ defineProps<{
         align-items: center;
         justify-content: center;
 
-        background-color: var(--gold-color);
-        color: var(--text-dark-color);
+        background-color: var(--dark-gold);
+        color: var(--text-color-black);
 
         &__text {
-            font-size: 24px;
+            font-size: var(--text-base);
             font-weight: 700;
             line-height: 1;
+            font-family: var(--font-family);
         }
 
         &__icon {
-            width: 32px;
-            height: 32px;
+            width: 20px;
+            height: 20px;
             object-fit: contain;
         }
 
-    // только иконка, круглая кнопка
         &--icon {
             width: 50px;
             height: 50px;
@@ -67,7 +67,6 @@ defineProps<{
             border-radius: 50%;
         }
 
-    // текст + иконка
         &--full {
             width: 260px;
             height: 60px;
@@ -75,25 +74,25 @@ defineProps<{
             border-radius: 100px;
 
             justify-content: space-between;
-            gap: 74px;
+            gap: 47px;
         }
 
-    // только текст по центру
         &--text {
             width: auto;
             max-width: 180px;
             height: 32px;
             padding: 0 18px;
             border-radius: 4px;
-            background-color: var(--gold-color);
-            color: var(--text-dark-color);
+            background-color: var(--dark-gold);
+            color: var(--text-color-black);
             justify-content: center;
             text-align: center;
 
             .btn__text {
-                font-size: 14px;
+                font-size: var(--text-sm);
                 font-weight: 500;
                 line-height: 1;
+                font-family: var(--font-family);
             }
         }
     }
