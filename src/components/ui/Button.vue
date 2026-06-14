@@ -58,7 +58,6 @@ defineProps<{
             width: 15px;
             height: 15px;
             object-fit: contain;
-            margin-right: -25px;
         }
 
         &--icon {
@@ -75,7 +74,7 @@ defineProps<{
             border-radius: 100px;
 
             justify-content: space-between;
-            gap: 47px;
+            gap: 67px;
         }
 
         &--text {

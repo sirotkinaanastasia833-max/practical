@@ -78,7 +78,6 @@ a{
     margin-top: 30px;
 }
 
-/* ========== СТИЛИ ДЛЯ КНОПКИ ========== */
 .custom-button {
     width: 300px !important;
     margin-top: 80px;
