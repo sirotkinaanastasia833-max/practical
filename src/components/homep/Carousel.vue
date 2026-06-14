@@ -90,7 +90,7 @@ export default {
 .slide-content {
   color: var(--text-color);
   display: flex;
-  flex-direction: column;  /* Добавлено - чтобы кнопка была под текстом */
+  flex-direction: column;
 }
 .slide-title {
   margin: 6px 0px 0px 45px;
