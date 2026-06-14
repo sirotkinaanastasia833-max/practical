@@ -55,9 +55,10 @@ defineProps<{
         }
 
         &__icon {
-            width: 20px;
-            height: 20px;
+            width: 15px;
+            height: 15px;
             object-fit: contain;
+            margin-right: -25px;
         }
 
         &--icon {
