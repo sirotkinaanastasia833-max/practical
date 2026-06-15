@@ -82,7 +82,7 @@ defineProps<{
             max-width: 180px;
             height: 32px;
             padding: 0 18px;
-            border-radius: 4px;
+            border-radius: 30px;
             background-color: var(--dark-gold);
             color: var(--text-color-black);
             justify-content: center;
