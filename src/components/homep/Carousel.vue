@@ -123,11 +123,11 @@ export default {
   border-radius: 2px;
 }
 .dash.active {
-  background: white;
+  background: var(--dark-gold);
   width: 40px;
 }
 .dash:hover {
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--dark-gold);
 }
 .slide-content a {
   color: var(--dark-gold);
