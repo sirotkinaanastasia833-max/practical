@@ -5,12 +5,10 @@ import Card_container from '@/components/homep/Card_container.vue'
 import Fabric_container from '@/components/homep/Fabric_container.vue'
 import Saka_tekstil from '@/components/homep/Saka_tekstil.vue'
 import Sertifikat from '@/components/ui/Sertifikat.vue'
-<<<<<<< HEAD
+import Container_preface from '@/components/homep/Container_preface.vue';
 import Forma from '@/components/homep/Forma.vue'
 import Product_carousel from '@/components/ui/Product_carousel.vue'
-=======
-import Container_preface from '@/components/homep/Container_preface.vue';
->>>>>>> 7d07dec7d3acd6ecfc50b773281ff764df6bf396
+
 </script>
 
 <template>
@@ -20,12 +18,10 @@ import Container_preface from '@/components/homep/Container_preface.vue';
     <Fabric_container />
     <Saka_tekstil/>
     <Sertifikat/>
-<<<<<<< HEAD
+    <Container_preface />
     <Forma/>
     <Product_carousel/>
-=======
-    <Container_preface />
->>>>>>> 7d07dec7d3acd6ecfc50b773281ff764df6bf396
+    
 </template>
 
 <style scoped lang="scss">
