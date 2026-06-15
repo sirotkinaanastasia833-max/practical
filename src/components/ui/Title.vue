@@ -16,6 +16,7 @@ defineProps<{
         font-size: 26px;
         letter-spacing: 2%;
         font-weight: 600;
+        font-family: var(--font-family);
 
         &--center{
             text-align: center;
