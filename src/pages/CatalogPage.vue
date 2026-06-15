@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import Button from '@/components/ui/Button.vue'
+import Catalog from '@/components/aboutp/Catalog.vue';
+import Product_carousel from '@/components/ui/Product_carousel.vue'
 </script>
 
 <template>
-    <Button theme="full" text="Подробнее" icon="/src/assets/images/arrow.png"/>
+    <Catalog/>
+    <Product_carousel/>
 </template>
 
 <style scoped lang="scss">

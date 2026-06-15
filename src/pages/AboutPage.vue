@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import Title from '@/components/ui/Title.vue';
+import Button from '@/components/ui/Button.vue'
+
 </script>
 
 <template>
-    <Title text="sjfbgkjdbf" theme="center"/>
+    <Button theme="full" text="Подробнее" icon="/src/assets/images/arrow.png"/>
 </template>
 
 <style scoped lang="scss">
