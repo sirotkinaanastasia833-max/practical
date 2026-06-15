@@ -4,10 +4,10 @@
         <div class="nav">      
             <router-link to="/" class="nav-link" active-class="active" exact>Главная</router-link>
             <router-link to="/catalog" class="nav-link" active-class="active">Каталог <img src="./../../assets/images/nav.png" alt=""></router-link>
-            <router-link to="" class="nav-link" active-class="active">О компании</router-link>
-            <router-link to="" class="nav-link" active-class="active">Новости</router-link>
-            <router-link to="" class="nav-link" active-class="active">Доставка и оплата</router-link>
-            <router-link to="" class="nav-link" active-class="active">Контакты</router-link>
+            <router-link to="/about" class="nav-link" active-class="active">О компании</router-link>
+            <router-link to="#" class="nav-link" active-class="active">Новости</router-link>
+            <router-link to="#" class="nav-link" active-class="active">Доставка и оплата</router-link>
+            <router-link to="#" class="nav-link" active-class="active">Контакты</router-link>
         </div>
     </div>
   </nav>
