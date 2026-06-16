@@ -94,10 +94,12 @@ export default {
 }
 .slide-title {
   margin: 6px 0px 0px 45px;
+  font-weight: 600;
 }
 .slide-content p {
   font-size: var(--text-3xl);
   font-family: var(--font-family);
+  font-weight: 600;
 }
 .slide-content img {
   max-width: 100%;
