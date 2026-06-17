@@ -36,12 +36,20 @@ const products: ProductType[] = [
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/styles/mixins.scss' as *;
 .products-grid {
     display: grid;
     grid-template-columns: repeat(3, auto);
     justify-content: end;
     gap: 40px 40px;
     padding-top: 20px;
-    
+    @include tablet{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }
+    @include mobile{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+    }
 }
 </style>

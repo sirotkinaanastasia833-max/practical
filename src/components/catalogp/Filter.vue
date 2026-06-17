@@ -52,20 +52,18 @@ const select = (option: string) => {
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/styles/mixins.scss' as *;
     .filter_second_wrapper{
         @include tablet{
             display: none;
         }
         @include mobile{
-            display: none;
+            
         }
     }
     .filter_wrapper_box{
         display: flex;
         justify-content: flex-start;
-        @include mobile{
-                display: none;
-            }
     }
     .circle{
         width: 20px;
@@ -89,6 +87,10 @@ const select = (option: string) => {
         @include tablet{
             padding-left: 250px;
         }
+        @include mobile{
+            padding-left: 0px;
+            gap: 250px;
+        }
     }
     .title_filter{
         font-size: var(--text-sm);
@@ -104,6 +106,11 @@ const select = (option: string) => {
             flex-direction: row-reverse;
             justify-content: space-evenly;
             gap: 80px;
+        }
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
     }
 
@@ -136,8 +143,8 @@ const select = (option: string) => {
     display: flex;
     flex-wrap: nowrap;
     @include mobile{
-            display: none;
-        }
+        gap: 100px;
+    }
 }
 .dropdown {
     position: relative;

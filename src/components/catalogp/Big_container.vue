@@ -36,6 +36,7 @@ const colorss = [
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/styles/mixins.scss' as *;
 .box_filter{
     @include tablet{
         display: none;

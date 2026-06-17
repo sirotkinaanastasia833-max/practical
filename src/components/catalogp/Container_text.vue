@@ -14,11 +14,16 @@ import Filter from '@/components/catalogp/Filter.vue';
 import Container from '../layout/Container.vue';
 </script>
 <style scoped lang="scss">
+@use '@/assets/styles/mixins.scss' as *;
     .title_com{
         width: 700px;
         display: flex;
         justify-content: flex-start;
         padding-top: 30px;
+        @include mobile{
+            width: 300px;
+            font-size: var(--text-2xl);
+        }
     }
     .container_text_wrapper{
         margin-left: 50px;
