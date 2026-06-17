@@ -5,6 +5,7 @@
             <div class="arrow left" @click="prevSlide">
                 <img src="./../../assets/images/ArrowRight.png" alt="назад">
             </div>
+            
             <div class="sertifikat-wrapper">
                 <div class="sertifikat-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
                     <div class="sertifikat-page" v-for="(page, index) in pages" :key="index">
@@ -59,6 +60,7 @@ h3 {
     text-align: center;
     margin-bottom: 40px;
     color: var(--text-color-black);
+
     @include tablet {
         font-size: 26px;
     }
@@ -81,6 +83,25 @@ h3 {
         justify-content: center;
     }
 }
+
+.sertifikat {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 60px;
+
+    @include tablet {
+        padding: 0 40px;
+        gap: 16px;
+    }
+
+    @include mobile {
+        padding: 0 16px;
+        gap: 10px;
+        justify-content: center;
+    }
+}
+
 .arrow {
     background-color: var(--saka-color);
     border-radius: 50%;
@@ -93,10 +114,12 @@ h3 {
     align-items: center;
     justify-content: center;
     z-index: 10;
+}
     &:hover {
         background-color: var(--dark-gold);
         transform: scale(1.1);
     }
+
     img {
         width: 20px;
         height: 20px;
@@ -108,43 +131,54 @@ h3 {
     @include tablet {
         width: 40px;
         height: 40px;
+
         img {
             width: 16px;
             height: 16px;
         }
     }
+
     @include mobile {
         width: 30px;
         height: 30px;
+
         img {
             width: 12px;
             height: 12px;
         }
     }
-}
+
 .sertifikat-wrapper {
     overflow: hidden;
     flex: 1;
 }
+
 .sertifikat-track {
     display: flex;
     transition: transform 0.5s ease;
 }
+
 .sertifikat-page {
     display: flex;
     flex-shrink: 0;
     width: 100%;
     justify-content: center;
     gap: 40px;
+
+
+
     @include tablet {
         gap: 0;
         justify-content: center;
     }
+
+
     @include mobile {
         gap: 0;
         justify-content: center;
     }
 }
+
 .sert {
     width: 260px;
     height: 350px;
@@ -152,29 +186,35 @@ h3 {
     border-radius: 12px;
     @include tablet {
         width: 360px;
-height: 504px;
+        height: 504px;
     }
-@include mobile {
+
+    @include mobile {
         width: 195px;
         height: 280px;
         margin: 0 auto;
     }
 }
+
 @include tablet {
     .sertifikat-page .sert:nth-child(2),
     .sertifikat-page .sert:nth-child(3) {
         display: none;
     }
 }
+
+
 @include mobile {
     .sertifikat-page .sert:nth-child(2),
     .sertifikat-page .sert:nth-child(3) {
         display: none;
     }
+
     .sertifikat-wrapper {
         display: flex;
         justify-content: center;
     }
+
     .sertifikat-page {
         justify-content: center;
     }
