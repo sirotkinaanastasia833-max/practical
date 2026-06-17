@@ -1,5 +1,6 @@
 <template>
-    <div class="tekstil">
+    <Container>
+        <div class="tekstil">
         <img src="./../../assets/images/sakatekstil.png" alt="">
         <div class="tekstil_right">
             <p class="tekstil_title">
@@ -26,24 +27,32 @@
             <Button theme="full" text="Смотреть каталог" icon="/src/assets/images/arrow.png" class="custom-button"/> 
        </div>
     </div>
+    </Container>
 </template>
 
-<script>
+<script setup>
 import Button from '@/components/ui/Button.vue'
-export default {
-  components: {
-    Button
-  }
-}
+import Container from '../layout/Container.vue';
+// export default {
+//   components: {
+//     Button
+//   }
+// }
 </script>
 
-<style>
+<style scoped lang="scss">
+@use '@/assets/styles/mixins.scss' as *;
 .tekstil{
-    width: 100%;
-    height: 639px;
     background-color: var(--saka-color);
     display: flex;
     flex-wrap: nowrap;
+    // @include tablet {
+    //     padding-top: 100px;
+    //     max-width: 100%;
+    //     height: 1159px;
+    //     flex-direction: column-reverse;
+    //     }
+
 }
 
 .tekstil_li{
@@ -64,6 +73,9 @@ a{
 .tekstil_right{
     margin-left: 160px;
     margin-top: 100px;
+    @include tablet {
+        margin-left: 30px;
+    }
 }
 
 .tekstil_title{
@@ -81,6 +93,10 @@ a{
 .custom-button {
     width: 300px !important;
     margin-top: 80px;
+    @include tablet {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
 }
 
 

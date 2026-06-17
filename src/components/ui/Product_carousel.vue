@@ -113,7 +113,8 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@use '@/assets/styles/mixins.scss' as *;
 h3 {
     font-size: var(--text-2xl);
     font-family: var(--font-family);

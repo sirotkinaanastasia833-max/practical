@@ -13,15 +13,22 @@ import Title from '@/components/ui/Title.vue';
     
 </template>
 
-<style>
+<style scoped lang="scss">
+@use '@/assets/styles/mixins.scss' as *;
     .preface_content{
         max-width: 100%;
         display: flex;
         justify-content: center;
+        @include tablet {
+          flex-direction: column;
+        }
     }
     .preface_title{
         padding: 80px 20px 80px 0px;
         width: 560px;
+        @include tablet {
+          padding: 40px 20px 0px 30px;
+        }
     }
     .preface_attention{
         width: 560px;
@@ -33,7 +40,10 @@ import Title from '@/components/ui/Title.vue';
         justify-content: center;
         border: 2px dashed var(--dark-gold);
         padding-top: 10px;
-        margin: 80px 0px 0px 05px;
+        margin: 80px 0px 0px 50px;
+         @include tablet {
+          margin: 0px 0px 50px 30px;
+        }
     }
     .attention_description{
         width: 370px;

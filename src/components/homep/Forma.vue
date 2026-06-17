@@ -1,29 +1,34 @@
 <template>
-    <div class="order-block">
-        <div class="order-content">
-            <p class="order-title">
-                Фабрика «Saka Tekstil» осуществляет прокрас <br>текстиля на заказ на самых выгодных условиях
-            </p>
-            <p class="order-subtitle">
-                Просто оставьте заявку на сайте и мы свяжемся с вами в ближайшее время
-            </p>
+    <Container>
+        <div class="form_wrapper">
+            <div class="order-block">
+                <div class="order-content">
+                    <p class="order-title">
+                        Фабрика «Saka Tekstil» осуществляет прокрас <br>текстиля на заказ на самых выгодных условиях
+                    </p>
+                    <p class="order-subtitle">
+                        Просто оставьте заявку на сайте и мы свяжемся с вами в ближайшее время
+                    </p>
+                </div>
+                
+                <div class="order-form">
+                    <input type="text" placeholder="Ваше имя" class="order-input">
+                    <input type="tel" placeholder="+7 (__) __.__-__" class="order-input">
+                    <input type="email" placeholder="Ваш E-mail" class="order-input">
+                    
+                    <Button theme="full" text="Отправить" icon="/src/assets/images/arrow.png" class="order-button"/>
+                </div>
+                 <p class="order-agreement">
+                        Нажмите на кнопку вы даете свое согласие на обработку персональных данных. Гарантируем! Спам не будет!
+                </p>
+            </div>
         </div>
-        
-        <div class="order-form">
-            <input type="text" placeholder="Ваше имя" class="order-input">
-            <input type="tel" placeholder="+7 (__) __.__-__" class="order-input">
-            <input type="email" placeholder="Ваш E-mail" class="order-input">
-            
-            <Button theme="full" text="Отправить" icon="/src/assets/images/arrow.png" class="order-button"/>
-        </div>
-         <p class="order-agreement">
-                Нажмите на кнопку вы даете свое согласие на обработку персональных данных. Гарантируем! Спам не будет!
-        </p>
-    </div>
+    </Container>
 </template>
 
 <script>
 import Button from '@/components/ui/Button.vue'
+import Container from '../layout/Container.vue';
 
 export default {
   components: {
@@ -32,14 +37,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@use '@/assets/styles/mixins.scss' as *;
+
+.form_wrapper{
+    display: flex;
+    justify-content: center;
+}
 
 .order-block {
     background-color: var(--color-dark-blue);
     width: 1160px;
     height: 330px;
     border-radius: 20px;
-    margin: 50px 0px 50px 160px;
+    @include tablet {
+          flex-direction: column;
+          width: 565px;
+          margin: 50px 0px 50px 0px;
+          height: 570px;
+        }
 }
 
 .order-title {
@@ -50,6 +66,9 @@ export default {
     margin-bottom: 0;
     padding-top: 60px;
     padding-bottom: 15px;
+     @include tablet {
+          width: 560px;
+        }
 }
 
 .order-subtitle {
@@ -65,6 +84,10 @@ export default {
     display: flex;
     flex-wrap: nowrap;
     margin: 30px 0px 0px 90px;
+    @include tablet {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 .order-input {
@@ -78,6 +101,11 @@ export default {
     margin-right: 20px;
     padding: 15px;
     color: white;
+    @include tablet {
+        width: 500px;
+        height: 30px;
+        margin-left: -70px;
+    }
 }
 
 .order-input::placeholder {
@@ -86,6 +114,12 @@ export default {
 
 .order-button {
     height: 50px;
+    @include tablet {
+        width: 530px;
+        height: 50px;
+        margin-left: -70px;
+    }
+    
 }
 
 .order-agreement {
@@ -94,6 +128,9 @@ export default {
     margin-top: 20px;
     text-align: center;
     font-family: var(--font-family);
+    @include tablet {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {

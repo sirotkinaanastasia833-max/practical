@@ -13,7 +13,7 @@ import Title_pallette from '@/components/homep/Title_pallette.vue';
 </script>
 
 <template>
-    <Stocks />
+    <Stocks class="Stocks" />
     <Carousel/>
     <Card_container/>
     <Fabric_container />
@@ -28,5 +28,10 @@ import Title_pallette from '@/components/homep/Title_pallette.vue';
 </template>
 
 <style scoped lang="scss">
-
+@use '@/assets/styles/mixins.scss' as *;
+    .Stocks{
+        @include tablet {
+            display: none;
+        }
+    }
 </style>

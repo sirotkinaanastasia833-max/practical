@@ -3,7 +3,8 @@
 </script>
 
 <template>
-    <div class="stocks_wrapper">
+    <div class="Container">
+        <div class="stocks_wrapper">
         <div class="skewed-box">
             <span class="stocks_title">АКЦИИ</span>
         </div>
@@ -46,6 +47,7 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -54,7 +56,6 @@
   height: 51px;
   background: var(--yellow-color);
   clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
-  margin: 0px 0px 0px 220px;
 }
 .stocks_wrapper{
     max-width: 100%;
@@ -62,6 +63,8 @@
     background-color: var(--color-dark-blue);
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
+
 }
 .stocks_wrapper_fabric{
     display: flex;

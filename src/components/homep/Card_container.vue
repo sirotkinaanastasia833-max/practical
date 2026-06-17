@@ -24,6 +24,7 @@
                 description="Здесь будет находиться небольшое триггерное описание или краткий дискриптор новости"
                 date="31.03.2022"
                 icon="/src/assets/images/arrow_ring.png"
+                class="card_home"
             />
         </div>
         <div class="card_wrapper">
@@ -34,6 +35,7 @@
                 description="Здесь будет находиться небольшое триггерное описание или краткий дискриптор новости"
                 date="31.03.2022"
                 icon="/src/assets/images/arrow_ring.png"
+                class="card_home"
             />
             <Card
                 bgColor="'var(----color-dark-blue)'"
@@ -42,6 +44,7 @@
                 description="Здесь будет находиться небольшое триггерное описание или краткий дискриптор новости"
                 date="31.03.2022"
                 icon="/src/assets/images/arrow_ring.png"
+                class="card_home"
             />
             <Card
                 bgColor="'var(----color-dark-blue)'"
@@ -50,6 +53,7 @@
                 description="Здесь будет находиться небольшое триггерное описание или краткий дискриптор новости"
                 date="31.03.2022"
                 icon="/src/assets/images/arrow_ring.png"
+                class="card_home"
             />
         </div>
     </div>
@@ -59,19 +63,28 @@
 import Card from '@/components/homep/Card.vue'
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@use '@/assets/styles/mixins.scss' as *;
+.card_home{
+    @include tablet {
+       display: none;
+    }
+}
 .card_wrapper{
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     gap: 20px;
+    @include tablet {
+       display: flex;
+       margin-right: 30px;
+    }
 }
 .news-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: 100%;
-    margin-left: 54px;
     margin-top: 20px;
 }
 </style>

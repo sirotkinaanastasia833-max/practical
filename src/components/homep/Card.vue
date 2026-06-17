@@ -38,6 +38,9 @@ defineProps<{
     background-color: var(--color-dark-blue);
     display: flex;
     flex-direction: column;
+    @include tablet {
+       width: 330px;
+    }
 }
 .card-image {
     position: relative;

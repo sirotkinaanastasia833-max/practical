@@ -50,7 +50,8 @@ export default {
 h3 {
     font-size: var(--text-2xl);
     font-family: var(--font-family);
-    margin: 60px 0px 30px 470px;
+    display: flex;
+    justify-content: center;
 }
 
 .arrow {
