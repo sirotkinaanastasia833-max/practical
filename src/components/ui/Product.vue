@@ -35,7 +35,7 @@ withDefaults(defineProps<Props>(), {
 <style scoped lang="scss">
 .card {
     width: 260px;
-    height: 431px;
+    height: 430px;
     background: white;
     border-radius: 12px;
     overflow: hidden;

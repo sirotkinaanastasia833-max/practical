@@ -82,8 +82,8 @@ import Card from '@/components/homep/Card.vue'
        justify-content: start;
     }
     @include mobile {
-       display: grid;
-       
+        display: flex;
+        flex-direction: column;
     }
 }
 .news-list {

@@ -51,11 +51,17 @@ export default {
     height: 330px;
     border-radius: 20px;
     @include tablet {
-          flex-direction: column;
-          width: 565px;
-          margin: 50px 0px 50px 0px;
-          height: 570px;
-        }
+        flex-direction: column;
+        width: 565px;
+        margin: 50px 0px 50px 0px;
+        height: 600px;
+    }
+    @include mobile {
+        flex-direction: column;
+        width: 360px;
+        margin: 50px 0px 50px 0px;
+        height: 630px;
+    }
 }
 
 .order-title {
@@ -66,9 +72,14 @@ export default {
     margin-bottom: 0;
     padding-top: 60px;
     padding-bottom: 15px;
-     @include tablet {
+    @include tablet {
           width: 560px;
         }
+    @include mobile {
+          width: 300px;
+          font-size: var(--text-xl);
+          padding-left: 30px;
+    }
 }
 
 .order-subtitle {
@@ -78,6 +89,11 @@ export default {
     text-align: center;
     margin-top: 5px;
     margin-bottom: 10px;
+    @include mobile {
+        width: 300px;
+        font-size: var(--text-base);
+        padding-left: 30px;
+    }
 }
 
 .order-form {
@@ -106,6 +122,12 @@ export default {
         height: 30px;
         margin-left: -70px;
     }
+    @include mobile {
+        width: 300px;
+        height: 30px;
+        margin-left: -70px;
+        border-radius: 16px;
+    }
 }
 
 .order-input::placeholder {
@@ -116,6 +138,11 @@ export default {
     height: 50px;
     @include tablet {
         width: 530px;
+        height: 50px;
+        margin-left: -70px;
+    }
+    @include mobile {
+        width: 330px;
         height: 50px;
         margin-left: -70px;
     }

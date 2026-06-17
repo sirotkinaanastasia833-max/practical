@@ -2,36 +2,27 @@
     <div class="product-block">
         <h3>Недавно просмотренные</h3>
         <div class="products">
-            <div class="arrow" @click="prevSlide">
+            <div class="arrow left" @click="prevSlide">
                 <img src="./../../assets/images/ArrowLeft.png" alt="">
             </div>
             
             <div class="products-wrapper">
-                <div class="products-track" :style="{ transform: 'translateX(-' + currentIndex * 100 + '%)' }">
-                    <div class="products-page">
+                <div class="products-track" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+                    <div class="products-page" v-for="(page, index) in pages" :key="index">
                         <Product 
-                            v-for="(product, index) in productsPage1" 
-                            :key="index"
+                            v-for="(product, idx) in page" 
+                            :key="idx"
                             :title="product.title"
                             :price="product.price"
                             :size="product.size"
                             :image="product.image"
-                        />
-                    </div>
-                    <div class="products-page">
-                        <Product 
-                            v-for="(product, index) in productsPage2" 
-                            :key="index"
-                            :title="product.title"
-                            :price="product.price"
-                            :size="product.size"
-                            :image="product.image"
+                            class="product-item"
                         />
                     </div>
                 </div>
             </div>
             
-            <div class="arrow" @click="nextSlide">
+            <div class="arrow right" @click="nextSlide">
                 <img src="./../../assets/images/ArrowRight.png" alt="">
             </div>
         </div>
@@ -39,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import Product from '@/components/ui/Product.vue'
 
 interface ProductItem {
@@ -51,7 +42,31 @@ interface ProductItem {
 
 const currentIndex = ref<number>(0)
 
-const productsPage1 = ref<ProductItem[]>([
+const allProducts = ref<ProductItem[]>([
+    {
+        title: 'Кулинарная гладь',
+        price: '11,4',
+        size: '180',
+        image: '/src/assets/images/blue.png'
+    },
+    {
+        title: 'Кулинарная гладь',
+        price: '13',
+        size: '180',
+        image: '/src/assets/images/grey.png'
+    },
+    {
+        title: 'Кулинарная гладь',
+        price: '122,4',
+        size: '180',
+        image: '/src/assets/images/orange.png'
+    },
+    {
+        title: 'Кулинарная гладь',
+        price: '13,84',
+        size: '180',
+        image: '/src/assets/images/green.png'
+    },
     {
         title: 'Кулинарная гладь',
         price: '11,4',
@@ -77,40 +92,20 @@ const productsPage1 = ref<ProductItem[]>([
         image: '/src/assets/images/green.png'
     }
 ])
-
-const productsPage2 = ref<ProductItem[]>([
-    {
-        title: 'Кулинарная гладь',
-        price: '11,4',
-        size: '180',
-        image: '/src/assets/images/blue.png'
-    },
-    {
-        title: 'Кулинарная гладь',
-        price: '13',
-        size: '180',
-        image: '/src/assets/images/grey.png'
-    },
-    {
-        title: 'Кулинарная гладь',
-        price: '122,4',
-        size: '180',
-        image: '/src/assets/images/orange.png'
-    },
-    {
-        title: 'Кулинарная гладь',
-        price: '13,84',
-        size: '180',
-        image: '/src/assets/images/green.png'
+const pages = computed(() => {
+    const itemsPerPage = 4
+    const result: ProductItem[][] = []
+    for (let i = 0; i < allProducts.value.length; i += itemsPerPage) {
+        result.push(allProducts.value.slice(i, i + itemsPerPage))
     }
-])
-
+    return result
+})
+const totalPages = computed(() => pages.value.length)
 const nextSlide = (): void => {
-    currentIndex.value = currentIndex.value === 0 ? 1 : 0
+    currentIndex.value = (currentIndex.value + 1) % totalPages.value
 }
-
 const prevSlide = (): void => {
-    currentIndex.value = currentIndex.value === 0 ? 1 : 0
+    currentIndex.value = (currentIndex.value - 1 + totalPages.value) % totalPages.value
 }
 </script>
 
@@ -119,8 +114,18 @@ const prevSlide = (): void => {
 
 .product-block {
     width: 100%;
-    height: 650px;
+    height: 660px;
     background-color: var(--saka-color);
+
+    @include tablet {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    @include mobile {
+        height: auto;
+        padding-bottom: 30px;
+    }
 }
 
 h3 {
@@ -130,6 +135,37 @@ h3 {
     font-weight: 500;
     padding-top: 70px;
     padding-bottom: 30px;
+
+    @include tablet {
+        font-size: 24px;
+        margin: 30px 0px 0px 30px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    @include mobile {
+        font-size: 20px;
+        margin: 20px 0px 0px 16px;
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+}
+
+.products {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 30px;
+
+    @include tablet {
+        padding: 0 30px;
+        gap: 12px;
+    }
+
+    @include mobile {
+        padding: 0 16px;
+        gap: 8px;
+    }
 }
 
 .arrow {
@@ -140,7 +176,9 @@ h3 {
     cursor: pointer;
     transition: all 0.3s ease;
     flex-shrink: 0;
-    margin-top: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         background-color: var(--dark-gold);
@@ -148,17 +186,34 @@ h3 {
     }
 
     img {
-        margin: 12px 0px 0px 12px;
+        width: 20px;
+        height: 20px;
+        margin: 0;
     }
-}
 
-.products {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-left: 60px;
-    margin-right: 60px;
-    align-items: flex-start;
-    gap: 20px;
+    &.left img {
+        transform: rotate(180deg);
+    }
+
+    @include tablet {
+        width: 36px;
+        height: 36px;
+
+        img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    @include mobile {
+        width: 30px;
+        height: 30px;
+
+        img {
+            width: 12px;
+            height: 12px;
+        }
+    }
 }
 
 .products-wrapper {
@@ -168,7 +223,7 @@ h3 {
 
 .products-track {
     display: flex;
-    transition: transform 0.4s ease;
+    transition: transform 0.5s ease;
 }
 
 .products-page {
@@ -177,5 +232,46 @@ h3 {
     width: 100%;
     justify-content: center;
     gap: 40px;
+
+    @include tablet {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    @include mobile {
+        gap: 16px;
+        justify-content: center;
+    }
+}
+
+.product-item {
+    width: 260px;
+    height: 430px;
+    flex-shrink: 0;
+
+    @include tablet {
+        width: 300px;
+        height: 497px;
+    }
+
+    @include mobile {
+        width: 300px;
+        height: 497px;
+    }
+}
+
+@include tablet {
+    .product-item:nth-child(3),
+    .product-item:nth-child(4) {
+        display: none;
+    }
+}
+
+@include mobile {
+    .product-item:nth-child(2),
+    .product-item:nth-child(3),
+    .product-item:nth-child(4) {
+        display: none;
+    }
 }
 </style>

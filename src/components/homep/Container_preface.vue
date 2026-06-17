@@ -28,7 +28,11 @@ import Title from '@/components/ui/Title.vue';
         padding: 80px 20px 80px 0px;
         width: 560px;
         @include tablet {
-          padding: 40px 20px 0px 30px;
+            padding: 40px 20px 0px 30px;
+        }
+        @include tablet {
+            font-size: var(--text-xl);
+            width: 300px;
         }
     }
     .preface_attention{

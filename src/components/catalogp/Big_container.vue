@@ -1,18 +1,21 @@
 <template>
-    <div class="wrapper_big">
-        <div>
-            <Container_filter class="Container_filter"/>
-            <Dropdown :options="['Плотные', 'Не плотные']"  placeholder="Тип полотна" class="Container_filter" />
-            <Dropdown :options="['Кулирная гладь', 'Рибана', 'Пике', 'Интерлок', 'Футер 2-х нитка', 'Футер 3-х нитка', 'Кашкорсе к 2х нитке', 'Кашкорсе к 3х нитке', 'Double Face']"  placeholder="Качество" class="Container_filter" />
-            <ColorDropdown :colors="colors" placeholder="Цвет" />
-            <Color 
-                :colors="colorss" 
-                placeholder="Цвет"
-            />
+    <Container>
+        <div class="wrapper_big_container">
+            <div class="wrapper_big">
+                <div class="box_filter">
+                    <Container_filter class="Container_filter"/>
+                    <Dropdown :options="['Плотные', 'Не плотные']"  placeholder="Тип полотна" class="Container_filter" />
+                    <Dropdown :options="['Кулирная гладь', 'Рибана', 'Пике', 'Интерлок', 'Футер 2-х нитка', 'Футер 3-х нитка', 'Кашкорсе к 2х нитке', 'Кашкорсе к 3х нитке', 'Double Face']"  placeholder="Качество" class="Container_filter" />
+                    <ColorDropdown :colors="colors" placeholder="Цвет" />
+                    <Color 
+                        :colors="colorss" 
+                        placeholder="Цвет"
+                    />
+                </div>
+                <Catalog/>
+            </div>
         </div>
-        <Catalog/>
-    </div>
-    
+    </Container>
 </template>
 
 <script setup lang="ts">
@@ -33,6 +36,18 @@ const colorss = [
 </script>
 
 <style scoped lang="scss">
+.box_filter{
+    @include tablet{
+        display: none;
+    }
+    @include mobile{
+            display: none;
+        }
+}
+.wrapper_big_container{
+    display: flex;
+    justify-content: center;
+}
 .wrapper_big{
     display: flex;
     flex-wrap: nowrap;

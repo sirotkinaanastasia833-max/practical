@@ -1,15 +1,17 @@
 <template>
   <Container>
-    <div class="slider">
-    <div class="slide">
-      <div class="slide-content">
-        <p class="slide-title">Здесь будет слайдер с различными акциями или <a href="">специальными предложениями</a></p>
-        <div class="title-05">01/05</div>
-        <Button theme="full" text="Подробнее" icon="/src/assets/images/arrow.png"/>
+    <div class="wrapper_slider">
+      <div class="slider">
+        <div class="slide">
+          <div class="slide-content">
+            <p class="slide-title">Здесь будет слайдер с различными акциями или <a href="">специальными предложениями</a></p>
+            <div class="title-05">01/05</div>
+            <Button theme="full" text="Подробнее" icon="/src/assets/images/arrow.png"/>
+          </div>
+          <img src="./../../assets/images/women.png" alt="">
+        </div>
       </div>
-      <img src="./../../assets/images/women.png" alt="">
     </div>
-  </div>
   </Container>
 </template>
 <script setup lang="ts">
@@ -20,6 +22,10 @@ import Container from '../layout/Container.vue';
 @use '@/assets/styles/mixins.scss' as *;
 .slider {
   margin-top: 60px;
+}
+.wrapper_slider{
+  display: flex;
+  justify-content: center;
 }
 .slide {
   position: relative;

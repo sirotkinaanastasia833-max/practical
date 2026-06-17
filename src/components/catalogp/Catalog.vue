@@ -1,132 +1,47 @@
 <template>
     <div class="products-grid">
-        <div class="products-row" v-for="(row, rowIndex) in productRows" :key="rowIndex">
-            <Product 
-                v-for="(product, colIndex) in row" 
-                :key="colIndex"
-                :title="product.title"
-                :price="product.price"
-                :size="product.size"
-                :image="product.image"
-            />
-        </div>
+        <Product 
+            v-for="product in products" 
+            :key="product.id"
+            v-bind="product"
+        />
     </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import Product from '@/components/ui/Product.vue'
 
-export default {
-    components: {
-        Product
-    },
-    data() {
-        return {
-            products: [
-                {
-                    title: 'Кулинарная гладь',
-                    price: '13',
-                    size: '180',
-                    image: '/src/assets/images/grey.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '122,4',
-                    size: '180',
-                    image: '/src/assets/images/orange.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '13,84',
-                    size: '180',
-                    image: '/src/assets/images/green.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '11,4',
-                    size: '180',
-                    image: '/src/assets/images/blue.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '13',
-                    size: '180',
-                    image: '/src/assets/images/grey.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '122,4',
-                    size: '180',
-                    image: '/src/assets/images/orange.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '13',
-                    size: '180',
-                    image: '/src/assets/images/grey.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '122,4',
-                    size: '180',
-                    image: '/src/assets/images/orange.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '13,84',
-                    size: '180',
-                    image: '/src/assets/images/green.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '11,4',
-                    size: '180',
-                    image: '/src/assets/images/blue.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '13',
-                    size: '180',
-                    image: '/src/assets/images/grey.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '122,4',
-                    size: '180',
-                    image: '/src/assets/images/orange.png'
-                }
-            ]
-        }
-    },
-    computed: {
-        productRows() {
-            const rows = []
-            for (let i = 0; i < this.products.length; i += 3) {
-                rows.push(this.products.slice(i, i + 3))
-            }
-            return rows
-        }
-    }
+interface ProductType {
+    id: number
+    title: string
+    price: string
+    size: string
+    image: string
 }
+
+const products: ProductType[] = [
+    { id: 1, title: 'Кулинарная гладь', price: '13', size: '180', image: '/src/assets/images/grey.png' },
+    { id: 2, title: 'Кулинарная гладь', price: '122,4', size: '180', image: '/src/assets/images/orange.png' },
+    { id: 3, title: 'Кулинарная гладь', price: '13,84', size: '180', image: '/src/assets/images/green.png' },
+    { id: 4, title: 'Кулинарная гладь', price: '11,4', size: '180', image: '/src/assets/images/blue.png' },
+    { id: 5, title: 'Кулинарная гладь', price: '13', size: '180', image: '/src/assets/images/grey.png' },
+    { id: 6, title: 'Кулинарная гладь', price: '122,4', size: '180', image: '/src/assets/images/orange.png' },
+    { id: 7, title: 'Кулинарная гладь', price: '13', size: '180', image: '/src/assets/images/grey.png' },
+    { id: 8, title: 'Кулинарная гладь', price: '122,4', size: '180', image: '/src/assets/images/orange.png' },
+    { id: 9, title: 'Кулинарная гладь', price: '13,84', size: '180', image: '/src/assets/images/green.png' },
+    { id: 10, title: 'Кулинарная гладь', price: '11,4', size: '180', image: '/src/assets/images/blue.png' },
+    { id: 11, title: 'Кулинарная гладь', price: '13', size: '180', image: '/src/assets/images/grey.png' },
+    { id: 12, title: 'Кулинарная гладь', price: '122,4', size: '180', image: '/src/assets/images/orange.png' }
+]
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .products-grid {
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+    gap: 40px 40px;
     padding-top: 20px;
-}
-
-.products-row {
-    display: flex;
-    justify-content: flex-end;
-    gap: 40px;
-    margin-bottom: 15px;
-}
-
-@media (max-width: 900px) {
-    .products-row {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+    
 }
 </style>

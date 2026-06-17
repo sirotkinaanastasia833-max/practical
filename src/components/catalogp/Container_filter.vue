@@ -1,17 +1,26 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import Container from '../layout/Container.vue';
 const price = ref(50000)
 </script>
 
 <template>
-    <div class="slider">
-        <div class="min">0₽</div>
-        <input type="range" v-model="price" min="0" max="100000">
-        <div>{{ price }}₽</div>
-    </div>
+   <Container>
+        <div class="Container_wrapper_filter">
+             <div class="slider">
+                <div class="min">0₽</div>
+                <input type="range" v-model="price" min="0" max="100000">
+                <div>{{ price }}₽</div>
+            </div>
+        </div>
+   </Container>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.Container_wrapper_filter{
+    display: flex;
+    justify-content: center;
+}
 .slider {
     display: flex;
     align-items: center;

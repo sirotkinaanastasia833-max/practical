@@ -1,37 +1,44 @@
 <template>
-    <div class="filter_wrapper">
-        <div class="filter_first">
-            <h1 class="title_filter">ФИЛЬТРЫ</h1>
-            <div class="circle"><span class="three">3</span></div>
-        </div>
-        <div class="filter_second">
-            <h1 class="title_filter_second">СБРОСИТЬ</h1>
-            <span class="crest">X</span>
-        </div>
-        <div class="wrapper_sort">
-            <h1 class="title_filter_second">СОРТИРОВКА:</h1>
-            <div class="dropdown">
-                <div class="dropdown-header" @click="isOpen = !isOpen">
-                    {{ selected }}
-                    <span>{{ isOpen ? '^' : 'v' }}</span>
+    <Container>
+        <div class="filter_wrapper_box">
+            <div class="filter_wrapper">
+                <div class="filter_first">
+                    <h1 class="title_filter">ФИЛЬТРЫ</h1>
+                    <div class="circle"><span class="three">3</span></div>
                 </div>
-                <div class="dropdown-list" v-if="isOpen">
-                    <div 
-                        v-for="option in options" 
-                        :key="option"
-                        @click="select(option)"
-                        class="dropdown-item"
-                    >
-                        {{ option }}
+                <div class="filter_second_wrapper">
+                    <div class="filter_second">
+                        <h1 class="title_filter_second">СБРОСИТЬ</h1>
+                        <span class="crest">X</span>
+                    </div>
+                </div>
+                <div class="wrapper_sort">
+                    <h1 class="title_filter_second">СОРТИРОВКА:</h1>
+                    <div class="dropdown">
+                        <div class="dropdown-header" @click="isOpen = !isOpen">
+                            {{ selected }}
+                            <span>{{ isOpen ? '^' : 'v' }}</span>
+                        </div>
+                        <div class="dropdown-list" v-if="isOpen">
+                            <div 
+                                v-for="option in options" 
+                                :key="option"
+                                @click="select(option)"
+                                class="dropdown-item"
+                            >
+                                {{ option }}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </Container>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import Container from '../layout/Container.vue'
 
 const isOpen = ref(false)
 const selected = ref('По новизне')
@@ -45,6 +52,21 @@ const select = (option: string) => {
 </script>
 
 <style scoped lang="scss">
+    .filter_second_wrapper{
+        @include tablet{
+            display: none;
+        }
+        @include mobile{
+            display: none;
+        }
+    }
+    .filter_wrapper_box{
+        display: flex;
+        justify-content: flex-start;
+        @include mobile{
+                display: none;
+            }
+    }
     .circle{
         width: 20px;
         height: 20px;
@@ -64,6 +86,9 @@ const select = (option: string) => {
     .filter_first{
         display: flex;
         flex-wrap: nowrap;
+        @include tablet{
+            padding-left: 250px;
+        }
     }
     .title_filter{
         font-size: var(--text-sm);
@@ -71,10 +96,15 @@ const select = (option: string) => {
         color: var(--text-color-black);
     }
     .filter_wrapper{
-        margin-left: 220px;
         display: flex;
         flex-wrap: nowrap;
         gap: 70px;
+        @include tablet{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-evenly;
+            gap: 80px;
+        }
     }
 
     .crest{
@@ -95,9 +125,6 @@ const select = (option: string) => {
         font-family: var(--font-family);
         color: var(--secondary);
     }
-    .filter_wrapper{
-        margin-left: 220px;
-    }
 
     .sort-dropdown {
     position: relative;
@@ -108,6 +135,9 @@ const select = (option: string) => {
     font-family: var(--font-family);
     display: flex;
     flex-wrap: nowrap;
+    @include mobile{
+            display: none;
+        }
 }
 .dropdown {
     position: relative;
