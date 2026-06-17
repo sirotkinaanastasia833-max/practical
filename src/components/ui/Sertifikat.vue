@@ -28,30 +28,25 @@
     </div>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            currentIndex: 0
-        }
-    },
-    methods: {
-        nextSlide() {
-            this.currentIndex = this.currentIndex === 0 ? 1 : 0
-        },
-        prevSlide() {
-            this.currentIndex = this.currentIndex === 0 ? 1 : 0
-        }
-    }
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const currentIndex = ref<number>(0)
+
+const nextSlide = (): void => {
+    currentIndex.value = currentIndex.value === 0 ? 1 : 0
+}
+
+const prevSlide = (): void => {
+    currentIndex.value = currentIndex.value === 0 ? 1 : 0
 }
 </script>
 
-<style>
+<style scoped lang="scss">
 h3 {
     font-size: var(--text-2xl);
     font-family: var(--font-family);
-    display: flex;
-    justify-content: center;
+    margin: 60px 0px 30px 470px;
 }
 
 .arrow {
@@ -63,15 +58,15 @@ h3 {
     transition: all 0.3s ease;
     flex-shrink: 0;
     margin-top: 220px;
-}
 
-.arrow:hover {
-    background-color: var(--dark-gold);
-    transform: scale(1.1);
-}
+    &:hover {
+        background-color: var(--dark-gold);
+        transform: scale(1.1);
+    }
 
-.arrow img {
-    margin: 12px 0px 0px 12px;
+    img {
+        margin: 12px 0px 0px 12px;
+    }
 }
 
 .sertifikat {

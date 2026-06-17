@@ -14,94 +14,82 @@
     </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import Button from '@/components/ui/Button.vue'
 
-export default {
-  components: {
-    Button
-  },
-  props: {
-    title: {
-      type: String,
-      default: 'Кулинарная гладь'
-    },
-    price: {
-      type: [String, Number],
-      default: '11,4'
-    },
-    size: {
-      type: [String, Number],
-      default: '180'
-    },
-    image: {
-      type: String,
-      default: '/src/assets/images/blue.png'
-    }
-  }
+interface Props {
+    title?: string
+    price?: string | number
+    size?: string | number
+    image?: string
 }
+
+withDefaults(defineProps<Props>(), {
+    title: 'Кулинарная гладь',
+    price: '11,4',
+    size: '180',
+    image: '/src/assets/images/blue.png'
+})
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .card {
     width: 260px;
     height: 431px;
     background: white;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    &-image {
+        width: 100%;
+        height: 260px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-content {
+        padding: 15px;
+    }
+
+    &-title {
+        font-size: var(--text-lg);
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-family: var(--font-family);
+    }
+
+    &-price {
+        font-size: var(--text-xl);
+        font-weight: 600;
+        font-family: var(--font-family);
+    }
+
+    &-size {
+        font-size: var(--text-sm);
+        color: var(--size-color);
+        margin-top: 25px;
+        font-family: var(--font-family);
+    }
 }
 
-.card-image {
-    width: 100%;
-    height: 260px;
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 15px;
-}
-
-.card-title {
-    font-size: var(--text-lg);
-    font-weight: 600;
-    margin-bottom: 8px;
-    font-family: var(--font-family);
-}
-
-.card-price {
-    font-size: var(--text-xl);
-    font-weight: 600;
-    font-family: var(--font-family);
-}
-
-.card-size {
-    font-size: var(--text-sm);
-    color: var(--size-color);
-    margin-top: 25px;
-    font-family: var(--font-family);
-}
-
-.info{
+.info {
     display: flex;
     flex-wrap: nowrap;
     gap: 15px;
     margin-top: -20px;
 }
 
-.product-button{
+.product-button {
     width: 220px;
     height: 55px;
     margin-left: 1px;
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 30px;
-
 }
-
 </style>

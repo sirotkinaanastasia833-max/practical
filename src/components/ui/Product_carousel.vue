@@ -38,83 +38,91 @@
     </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import { ref } from 'vue'
 import Product from '@/components/ui/Product.vue'
 
-export default {
-    components: {
-        Product
+interface ProductItem {
+    title: string
+    price: string | number
+    size: string | number
+    image: string
+}
+
+const currentIndex = ref<number>(0)
+
+const productsPage1 = ref<ProductItem[]>([
+    {
+        title: 'Кулинарная гладь',
+        price: '11,4',
+        size: '180',
+        image: '/src/assets/images/blue.png'
     },
-    data() {
-        return {
-            currentIndex: 0,
-            productsPage1: [
-                {
-                    title: 'Кулинарная гладь',
-                    price: '11,4',
-                    size: '180',
-                    image: '/src/assets/images/blue.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '13',
-                    size: '180',
-                    image: '/src/assets/images/grey.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '122,4',
-                    size: '180',
-                    image: '/src/assets/images/orange.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '13,84',
-                    size: '180',
-                    image: '/src/assets/images/green.png'
-                }
-            ],
-            productsPage2: [
-                {
-                    title: 'Кулинарная гладь',
-                    price: '11,4',
-                    size: '180',
-                    image: '/src/assets/images/blue.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '13',
-                    size: '180',
-                    image: '/src/assets/images/grey.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '122,4',
-                    size: '180',
-                    image: '/src/assets/images/orange.png'
-                },
-                {
-                    title: 'Кулинарная гладь',
-                    price: '13,84',
-                    size: '180',
-                    image: '/src/assets/images/green.png'
-                }
-            ]
-        }
+    {
+        title: 'Кулинарная гладь',
+        price: '13',
+        size: '180',
+        image: '/src/assets/images/grey.png'
     },
-    methods: {
-        nextSlide() {
-            this.currentIndex = this.currentIndex === 0 ? 1 : 0
-        },
-        prevSlide() {
-            this.currentIndex = this.currentIndex === 0 ? 1 : 0
-        }
+    {
+        title: 'Кулинарная гладь',
+        price: '122,4',
+        size: '180',
+        image: '/src/assets/images/orange.png'
+    },
+    {
+        title: 'Кулинарная гладь',
+        price: '13,84',
+        size: '180',
+        image: '/src/assets/images/green.png'
     }
+])
+
+const productsPage2 = ref<ProductItem[]>([
+    {
+        title: 'Кулинарная гладь',
+        price: '11,4',
+        size: '180',
+        image: '/src/assets/images/blue.png'
+    },
+    {
+        title: 'Кулинарная гладь',
+        price: '13',
+        size: '180',
+        image: '/src/assets/images/grey.png'
+    },
+    {
+        title: 'Кулинарная гладь',
+        price: '122,4',
+        size: '180',
+        image: '/src/assets/images/orange.png'
+    },
+    {
+        title: 'Кулинарная гладь',
+        price: '13,84',
+        size: '180',
+        image: '/src/assets/images/green.png'
+    }
+])
+
+const nextSlide = (): void => {
+    currentIndex.value = currentIndex.value === 0 ? 1 : 0
+}
+
+const prevSlide = (): void => {
+    currentIndex.value = currentIndex.value === 0 ? 1 : 0
 }
 </script>
 
 <style scoped lang="scss">
 @use '@/assets/styles/mixins.scss' as *;
+
+.product-block {
+    width: 100%;
+    height: 650px;
+    background-color: var(--saka-color);
+}
+
 h3 {
     font-size: var(--text-2xl);
     font-family: var(--font-family);
@@ -133,15 +141,15 @@ h3 {
     transition: all 0.3s ease;
     flex-shrink: 0;
     margin-top: 220px;
-}
 
-.arrow:hover {
-    background-color: var(--dark-gold);
-    transform: scale(1.1);
-}
+    &:hover {
+        background-color: var(--dark-gold);
+        transform: scale(1.1);
+    }
 
-.arrow img {
-    margin: 12px 0px 0px 12px;
+    img {
+        margin: 12px 0px 0px 12px;
+    }
 }
 
 .products {
@@ -169,11 +177,5 @@ h3 {
     width: 100%;
     justify-content: center;
     gap: 40px;
-}
-
-.product-block{
-    width: 100%;
-    height: 650px;
-    background-color: var(--saka-color);
 }
 </style>
