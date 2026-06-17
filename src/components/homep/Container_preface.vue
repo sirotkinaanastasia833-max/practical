@@ -21,6 +21,7 @@ import Title from '@/components/ui/Title.vue';
         justify-content: center;
         @include tablet {
           flex-direction: column;
+          align-items: start;
         }
     }
     .preface_title{
@@ -41,8 +42,11 @@ import Title from '@/components/ui/Title.vue';
         border: 2px dashed var(--dark-gold);
         padding-top: 10px;
         margin: 80px 0px 0px 50px;
-         @include tablet {
-          margin: 0px 0px 50px 30px;
+        @include tablet {
+            margin: 0px 0px 50px 30px;
+        }
+        @include mobile {
+            display: none;
         }
     }
     .attention_description{

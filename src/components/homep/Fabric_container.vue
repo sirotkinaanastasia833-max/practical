@@ -3,8 +3,6 @@ import Title from '@/components/ui/Title.vue'
 import Fabric from '@/components/homep/Fabric.vue'
 import Button from '@/components/ui/Button.vue'
 import { ref, onMounted, onUnmounted } from 'vue'
-
-// Данные о картинках с размерами для разных экранов
 const imageSizes = [
     { 
         image: '/src/assets/images/blue_fabric.png', 
@@ -50,24 +48,18 @@ const imageSizes = [
     }
 ]
 
-// Текущая ширина экрана
 const windowWidth = ref(window.innerWidth)
-
-// Определяем тип устройства
 const getDeviceType = () => {
     const width = windowWidth.value
     if (width >= 1024) return 'desktop'
     if (width >= 640) return 'tablet'
     return 'mobile'
 }
-
-// Получаем размеры для текущего устройства
 const getSize = (sizes: any) => {
     const device = getDeviceType()
     return sizes[device]
 }
 
-// Обновляем ширину при ресайзе
 const updateWidth = () => {
     windowWidth.value = window.innerWidth
 }

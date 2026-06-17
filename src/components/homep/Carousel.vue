@@ -20,8 +20,6 @@ import Container from '../layout/Container.vue';
 @use '@/assets/styles/mixins.scss' as *;
 .slider {
   margin-top: 60px;
-  @include tablet {
-  }
 }
 .slide {
   position: relative;
@@ -36,6 +34,10 @@ import Container from '../layout/Container.vue';
   @include tablet {
     max-width: 580px;
     min-height: 460px;
+  }
+  @include mobile {
+    max-width: 300px;
+    min-height: 618px;
   }
 }
 .slide-content {
@@ -60,6 +62,13 @@ import Container from '../layout/Container.vue';
     padding-top: 50px;
     letter-spacing: 7%;
     font-weight: 600;
+  }
+  @include mobile {
+    width: 247px;
+    height: 96px;
+    font-size: 18px;
+    padding-top: 0px;
+    padding-right: 10px;
   }
 }
 .slide-content img {
@@ -108,10 +117,16 @@ import Container from '../layout/Container.vue';
   margin-left: 100px;
   @include tablet {
     margin-left: -150px;
-    margin-bottom: -180px;
     margin-top: 60px;
     width: 427px;
     height: 460px;
+    z-index: 1;
+  }
+  @include mobile {
+    margin-left: -350px;
+    margin-top: 326px;
+    width: 344px;
+    height: 348px;
     z-index: 1;
   }
 }
@@ -124,17 +139,28 @@ import Container from '../layout/Container.vue';
   @include tablet {
     margin-top: 250px;
   }
+  @include mobile {
+    margin-top: 200px;
+    margin-left: 20px;
+  }
 }
 .slide-content :deep(.btn) {
   margin-left: 45px;
   margin-top: -115px;
   @include tablet {
+    margin-left: 20px;
+  }
+  @include mobile {
     z-index: 2;
-     margin-top: -250px;
+     margin-top: -200px;
   }
 }
 .Button_carusel{
   @include tablet {
+    margin-top: -130px;
+    z-index: 2;
+  }
+  @include mobile {
     margin-top: -130px;
     z-index: 2;
   }
