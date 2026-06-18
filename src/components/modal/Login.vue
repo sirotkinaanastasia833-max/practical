@@ -84,7 +84,7 @@ const closeModal = (): void => {
 }
 .input-wrapper {
     position: relative;
-    width: 320px;
+    width: 280px;
     max-width: 100%;
 }
 .input-icon {
@@ -100,7 +100,7 @@ const closeModal = (): void => {
     border: none;
     border-radius: 12px;
     font-size: 16px;
-    width: 320px;
+    width: 260px;
     height: 55px;
     box-sizing: border-box;
     outline: none;
