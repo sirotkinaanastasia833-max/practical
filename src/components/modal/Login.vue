@@ -116,6 +116,7 @@ const closeModal = (): void => {
     font-family: var(--font-family);
     color: var(--text-color-black);
     margin-top: 20px;
+    margin-bottom: 15px;
 }
 .title_modal p {
     display: flex;
