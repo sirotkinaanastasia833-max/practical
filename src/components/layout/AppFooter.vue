@@ -191,7 +191,7 @@ import Container from '../layout/Container.vue';
     gap: 20px;
     display: flex;
     flex-wrap: nowrap;
-    margin: 10px 0px 50px 210px;
+    margin: 10px 0px 50px 100px;
 
     @include tablet {
         margin: 10px 0px 30px 20px;

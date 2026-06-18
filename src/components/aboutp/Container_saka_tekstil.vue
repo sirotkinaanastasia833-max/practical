@@ -42,6 +42,7 @@ import Container from '../layout/Container.vue';
         display: flex;
         justify-content: flex-start;
         color: var(--text-color-black);
+        padding: 30px 0px;
         @include tablet{
             padding-left: 70px;
         }

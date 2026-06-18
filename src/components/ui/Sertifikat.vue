@@ -69,7 +69,7 @@ h3 {
     text-align: center;
     margin-bottom: 40px;
     color: var(--text-color-black);
-
+    padding-top: 30px;
     @include tablet {
         font-size: 26px;
     }

@@ -73,12 +73,11 @@ export default {
     padding-top: 60px;
     padding-bottom: 15px;
     @include tablet {
-          width: 560px;
+          width: 550px;
         }
     @include mobile {
-          width: 300px;
+          width: 200px;
           font-size: var(--text-xl);
-          padding-left: 30px;
     }
 }
 
@@ -92,7 +91,6 @@ export default {
     @include mobile {
         width: 300px;
         font-size: var(--text-base);
-        padding-left: 30px;
     }
 }
 
@@ -119,13 +117,13 @@ export default {
     color: white;
     @include tablet {
         width: 500px;
-        height: 30px;
-        margin-left: -70px;
+        height: 60px;
+        margin-left: -60px;
     }
     @include mobile {
         width: 300px;
-        height: 30px;
-        margin-left: -70px;
+        height: 60px;
+        margin-left: -90px;
         border-radius: 16px;
     }
 }
@@ -144,7 +142,7 @@ export default {
     @include mobile {
         width: 330px;
         height: 50px;
-        margin-left: -70px;
+        margin-left: -100px;
     }
     
 }

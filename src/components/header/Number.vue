@@ -31,9 +31,9 @@
         font-size: var(--text-xl);
     }
     .link{
-        margin: -20px 0px 0px 75px;
+        margin: -10px 0px 0px 75px;
         font-size: var(--text-xs);
-        color: var(--text-color);
+        color: var(--secondary);
         font-family: var(--font-family);
     }
 </style>

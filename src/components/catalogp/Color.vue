@@ -47,7 +47,7 @@ const selectColor = (color: ColorOption) => {
     font-family: var(--font-family);
     background-color: var(--saka-color);
     width: 330px;
-    height: 30px;
+    height: 90px;
     padding: 20px;
     border-radius: 16px;
     margin-top: 10px;

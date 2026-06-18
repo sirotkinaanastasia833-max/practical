@@ -68,7 +68,7 @@ import Container from '../layout/Container.vue';
     flex-shrink: 0;
     
     @include tablet {
-        max-width: 100%;
+        max-width: 698px;
         height: auto;
     }
     
@@ -103,7 +103,7 @@ a{
 
 .tekstil_right img{
     margin-left: -45px;
-    
+    padding-top: 25px;
     @include tablet {
         margin-left: 0;
     }
@@ -145,7 +145,7 @@ a{
 }
 
 .tekstil_li_title{
-    margin-top: -18px;
+    padding-top: 10px;
     word-break: break-word;
     
     @include tablet {

@@ -19,7 +19,7 @@ import Container from '../layout/Container.vue';
         width: 700px;
         display: flex;
         justify-content: start;
-        padding-top: 30px;
+        padding: 30px 0px;
         color: var(--text-color-black);
         @include mobile{
             width: 300px;

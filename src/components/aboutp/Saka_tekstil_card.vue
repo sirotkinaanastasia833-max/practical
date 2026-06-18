@@ -41,7 +41,7 @@ defineProps<{
         font-family: var(--font-family);
     }
     .card-description{
-        margin-top: -10px;
+        margin-top: 15px;
         font-size: var(--text-sm);
         color: var(--text-color-black);
         text-align: left;

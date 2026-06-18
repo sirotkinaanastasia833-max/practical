@@ -152,7 +152,6 @@ a{
 }
 
 .title_circle{
-    margin-top: -28px;
     font-family: var(--font-family);
 }
 

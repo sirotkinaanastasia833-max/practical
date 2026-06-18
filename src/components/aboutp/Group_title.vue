@@ -83,6 +83,7 @@ h3{
     font-size: var(--text-2xl);
     font-weight: 800;
     color: var(--text-color-black);
+    padding: 30px 0px;
     @include mobile{
         font-size: var(--text-xl);
     }

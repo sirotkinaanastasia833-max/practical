@@ -44,7 +44,7 @@ const selected = ref(props.placeholder || 'Тип полотна')
     color: var(--text-color-black);
     background-color: var(--saka-color);
     width: 330px;
-    height: 50px;
+    height: 90px;
     padding: 20px;
     border-radius: 16px;
     margin-top: 10px;

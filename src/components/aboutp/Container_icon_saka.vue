@@ -65,6 +65,7 @@ import Container from '../layout/Container.vue';
     .wrapper_cont_icon_box{
         display: flex;
         justify-content: center;
+        margin-top: 40px;
     }
     .wrapper_cont_icon{
         max-width: 100%;
@@ -82,6 +83,7 @@ import Container from '../layout/Container.vue';
     }
     .title_com{
         width: 700px;
+        padding: 40px;
         @include tablet{
             max-width: 620px;
         }

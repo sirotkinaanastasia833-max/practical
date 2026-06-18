@@ -116,20 +116,16 @@ onUnmounted(() => {
     font-size: var(--text-2xl);
     max-width: 500px;
     word-break: break-word;
-    padding-top: 30px;
+    padding: 30px 0px 20px 30px;
     width: 100%;
-    padding-left: 200px;  
-
     @include tablet {
         padding-left: 50px;
         font-size: 24px;
-        max-width: 350px;
     }
 
     @include mobile {
         padding-left: 20px;
         font-size: 20px;
-        max-width: 250px;
     }
 }
 

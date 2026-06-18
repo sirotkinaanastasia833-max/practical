@@ -70,7 +70,7 @@ const select = (option: string) => {
         height: 20px;
         background-color: var(--dark-gold);
         border-radius: 20px;
-        margin: 7px 0px 0px 5px;
+        margin-left: 5px;
     }
     .three{
         color: var(--text-color);
@@ -101,6 +101,7 @@ const select = (option: string) => {
         display: flex;
         flex-wrap: nowrap;
         gap: 70px;
+        padding-top: 40px;
         @include tablet{
             display: flex;
             flex-direction: row-reverse;
@@ -115,13 +116,12 @@ const select = (option: string) => {
     }
 
     .crest{
-        margin: 7px 0px 0px 5px;
+        margin: 1px 0px 0px 5px;
         color: var(--secondary);
         display: flex;
         justify-content: center;
         font-size: var(--text-xs);
         font-family: var(--font-family);
-        padding-top: 3px;
     }
     .filter_second{
         display: flex;
@@ -153,7 +153,7 @@ const select = (option: string) => {
 }
 
 .dropdown-header {
-    padding: 10px;
+    padding-left: 10px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;

@@ -67,6 +67,7 @@ withDefaults(defineProps<Props>(), {
         font-size: var(--text-xl);
         font-weight: 600;
         font-family: var(--font-family);
+        padding-top: 20px;
     }
 
     &-size {
@@ -81,7 +82,7 @@ withDefaults(defineProps<Props>(), {
     display: flex;
     flex-wrap: nowrap;
     gap: 15px;
-    margin-top: -20px;
+    margin-top: -10px;
 }
 
 .product-button {
@@ -91,5 +92,6 @@ withDefaults(defineProps<Props>(), {
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 30px;
+    margin-top: 15px;
 }
 </style>

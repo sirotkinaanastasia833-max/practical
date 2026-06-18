@@ -7,6 +7,7 @@ import Container from '../layout/Container.vue';
 </template>
 <style scoped lang="scss">
     .preface_title{
+        padding: 30px;
         max-width: 100%;
         display: flex;
         justify-content: flex-start;
