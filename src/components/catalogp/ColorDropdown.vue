@@ -39,7 +39,6 @@ const selectColor = (color: string) => {
     height: 30px;
     padding: 20px ;
     border-radius: 16px;
-    margin-left: 220px;
     margin-top: 10px;
     font-size: var(--text-xs);
 }

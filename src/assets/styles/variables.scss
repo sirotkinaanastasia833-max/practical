@@ -24,6 +24,7 @@
 
     --border-radius-sm: 16px;
 
+    --background: #ffffff;
     --color-dark-blue: #19242F;
     --color-nav: #252e39;
     --text-color: #ffffff;
@@ -31,6 +32,18 @@
     --text-color-black: #000000;
     --dark-gold: #BFA470;
     --saka-color: #F8F8F8;
+    --size-color: #888;
+    --secondary: #acacac;
+}
+[data-theme="dark"] {
+    --background: #19242F;
+    --color-dark-blue: #888;
+    --color-nav: #DBC08D;
+    --text-color: #000000;
+    --yellow-color: #252e39;
+    --text-color-black: #ffffff;
+    --dark-gold: #BFA470;
+    --saka-color: #acacac;
     --size-color: #888;
     --secondary: #acacac;
 }

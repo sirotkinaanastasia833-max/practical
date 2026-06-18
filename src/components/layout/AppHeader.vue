@@ -4,6 +4,7 @@ import Emblem from '@/components/header/Emblem.vue';
 import Profile from '@/components/header/Profile.vue';
 import Number from '@/components/header/Number.vue';
 import Navbar from '@/components/header/Navbar.vue';
+import Theme from '@/components/header/Theme.vue';
 </script>
 
 <template>
@@ -18,6 +19,8 @@ import Navbar from '@/components/header/Navbar.vue';
       <Profile class="profil_header"/>
 
       <Number class="number"/>
+
+      <Theme class="theme"/>
       
     </header>
     <Navbar class="navbar"/>
@@ -26,6 +29,14 @@ import Navbar from '@/components/header/Navbar.vue';
 
 <style scoped lang="scss">
 @use '@/assets/styles/mixins.scss' as *;
+  .theme{
+    @include tablet{
+        display: none;
+      }
+      @include mobile{
+        display: none;
+      }
+  }
   .header{
     max-width: 100%;
     max-height: 110px;

@@ -19,6 +19,7 @@ import Title from '@/components/ui/Title.vue';
         max-width: 100%;
         display: flex;
         justify-content: center;
+        color: var(--text-color-black);
         @include tablet {
           flex-direction: column;
           align-items: start;

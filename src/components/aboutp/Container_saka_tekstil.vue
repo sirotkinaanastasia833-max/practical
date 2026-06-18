@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Title from '@/components/ui/Title.vue'
 import Saka_tekstil_card from '@/components/aboutp/Saka_tekstil_card.vue'
+import Container from '../layout/Container.vue';
 </script>
 
 <template>
@@ -40,6 +41,7 @@ import Saka_tekstil_card from '@/components/aboutp/Saka_tekstil_card.vue'
         width: 700px;
         display: flex;
         justify-content: flex-start;
+        color: var(--text-color-black);
         @include tablet{
             padding-left: 70px;
         }

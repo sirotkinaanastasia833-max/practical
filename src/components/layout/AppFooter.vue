@@ -1,5 +1,5 @@
 <template>
-    <div class="Container">
+    <Container>
         <div class="wrapper_container_footer">
             <div class="container_footer">
                 <Logo class="logo"/>
@@ -49,12 +49,13 @@
                 <p class="p">Copyright © 2023 Сака Текстиль. Все права защищены.</p>
             </div>
         </div>
-    </div>
+    </Container>
 </template>
 
 <script setup lang="ts">
 import Logo from '@/components/ui/Logo.vue';
 import Button from '@/components/ui/Button.vue';
+import Container from '../layout/Container.vue';
 </script>
 
 <style scoped lang="scss">

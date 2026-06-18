@@ -38,6 +38,11 @@ const colorss = [
 <style scoped lang="scss">
 @use '@/assets/styles/mixins.scss' as *;
 .box_filter{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 30px;
     @include tablet{
         display: none;
     }
@@ -54,6 +59,7 @@ const colorss = [
     flex-wrap: nowrap;
 }
 .Container_filter{
-    margin-left: 220px;
+    display: flex;
+    justify-content: center;
 }
 </style>

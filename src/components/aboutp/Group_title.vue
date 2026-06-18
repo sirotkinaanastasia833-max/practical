@@ -82,6 +82,7 @@ const activeBtn = ref<string | null>(null)
 h3{
     font-size: var(--text-2xl);
     font-weight: 800;
+    color: var(--text-color-black);
     @include mobile{
         font-size: var(--text-xl);
     }

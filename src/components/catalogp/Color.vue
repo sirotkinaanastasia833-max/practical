@@ -50,7 +50,6 @@ const selectColor = (color: ColorOption) => {
     height: 30px;
     padding: 20px;
     border-radius: 16px;
-    margin-left: 220px;
     margin-top: 10px;
     font-size: var(--text-xs);
 }

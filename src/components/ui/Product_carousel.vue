@@ -1,6 +1,6 @@
 <template>
     <div class="product-block">
-        <h3>Недавно просмотренные</h3>
+        <Container><h3>Недавно просмотренные</h3></Container>
         <div class="products">
             <div class="arrow left" @click="prevSlide">
                 <img src="./../../assets/images/ArrowLeft.png" alt="">
@@ -32,6 +32,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import Product from '@/components/ui/Product.vue'
+import Container from '../layout/Container.vue'
 
 interface ProductItem {
     title: string

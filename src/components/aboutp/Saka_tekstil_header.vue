@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Text_nav from '@/components/catalogp/Text_nav.vue';
 import Title from '@/components/ui/Title.vue'
+import Container from '../layout/Container.vue';
 </script>
 
 <template>
@@ -19,6 +20,7 @@ import Title from '@/components/ui/Title.vue'
         display: flex;
         justify-content: start;
         padding-top: 30px;
+        color: var(--text-color-black);
         @include mobile{
             width: 300px;
             font-size: var(--text-2xl);

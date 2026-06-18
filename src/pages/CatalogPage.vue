@@ -5,11 +5,15 @@ import Big_container from '@/components/catalogp/Big_container.vue';
 </script>
 
 <template>
-    <Container_text />
-    <Big_container />
-    <Product_carousel/>
+    <div class="block_theme">
+        <Container_text />
+        <Big_container />
+        <Product_carousel/>
+    </div>
 </template>
 
 <style scoped lang="scss">
-
+    .block_theme{
+        background-color: var(--background);
+    }
 </style>

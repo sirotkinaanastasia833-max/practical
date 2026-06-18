@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Title from '@/components/ui/Title.vue';
+import Container from '../layout/Container.vue';
 </script>
 <template>
     <Container><Title thema="left" text="Сезонная палитра" class="preface_title"/></Container>
@@ -9,5 +10,6 @@ import Title from '@/components/ui/Title.vue';
         max-width: 100%;
         display: flex;
         justify-content: flex-start;
+        color: var(--text-color-black);
     }
 </style>

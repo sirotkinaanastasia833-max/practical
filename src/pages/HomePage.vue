@@ -13,18 +13,20 @@ import Title_pallette from '@/components/homep/Title_pallette.vue';
 </script>
 
 <template>
-    <Stocks class="Stocks" />
-    <Carousel/>
-    <Card_container/>
-    <Fabric_container />
-    <Saka_tekstil/>
-    <Sertifikat/>
-    <Container_preface />
-    <Container_t_shirt />
-    <Title_pallette />
-    <Container_t_shirt />
-    <Forma/>
-    <Product_carousel/>
+    <div class="block_theme">
+        <Stocks class="Stocks" />
+        <Carousel/>
+        <Card_container/>
+        <Fabric_container />
+        <Saka_tekstil/>
+        <Sertifikat/>
+        <Container_preface />
+        <Container_t_shirt />
+        <Title_pallette />
+        <Container_t_shirt />
+        <Forma/>
+        <Product_carousel/>
+    </div>
 </template>
 
 <style scoped lang="scss">
@@ -33,5 +35,8 @@ import Title_pallette from '@/components/homep/Title_pallette.vue';
         @include tablet {
             display: none;
         }
+    }
+    .block_theme{
+        background-color: var(--background);
     }
 </style>

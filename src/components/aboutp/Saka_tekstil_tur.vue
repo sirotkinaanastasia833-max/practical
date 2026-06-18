@@ -59,6 +59,7 @@ import Container from '../layout/Container.vue';
 .tekstil{
     display: flex;
     flex-wrap: nowrap;
+    color: var(--text-color-black);
     @include mobile{
         display: flex;
         flex-direction: column;
@@ -184,6 +185,8 @@ a{
     }
 }
 .circle_right{
-    padding-left: 100px;
+    @include mobile{
+        padding-left: 100px;
+    }
 }
 </style>

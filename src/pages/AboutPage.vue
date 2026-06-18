@@ -10,15 +10,19 @@ import Product_carousel from '../components/ui/Product_carousel.vue';
 </script>
 
 <template>
-    <Saka_tekstil_header />
-    <Saka_tekstil_tur/>
-    <Container_saka_tekstil />
-    <Container_icon_saka/>
-    <Sertifikat/>
-    <Group_title/>
-    <Product_carousel/>
+    <div class="block_theme">
+        <Saka_tekstil_header />
+        <Saka_tekstil_tur/>
+        <Container_saka_tekstil />
+        <Container_icon_saka/>
+        <Sertifikat/>
+        <Group_title/>
+        <Product_carousel/>
+    </div>
 </template>
 
 <style scoped lang="scss">
-
+    .block_theme{
+        background-color: var(--background);
+    }
 </style>
