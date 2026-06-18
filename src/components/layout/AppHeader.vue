@@ -1,10 +1,25 @@
 <script setup lang="ts">
-import Logo from '@/components/ui/Logo.vue';
-import Emblem from '@/components/header/Emblem.vue';
-import Profile from '@/components/header/Profile.vue';
-import Number from '@/components/header/Number.vue';
-import Navbar from '@/components/header/Navbar.vue';
 import Theme from '@/components/header/Theme.vue';
+import Logo from '@/components/ui/Logo.vue'
+import Emblem from '@/components/header/Emblem.vue'
+import Profile from '@/components/header/Profile.vue'
+import Number from '@/components/header/Number.vue'
+import Navbar from '@/components/header/Navbar.vue'
+import Basket from '@/components/modal/Basket.vue'
+import { ref } from 'vue'
+
+
+const isModalOpen = ref<boolean>(false)
+
+const openModal = (): void => {
+  isModalOpen.value = true
+}
+
+const closeModal = (): void => {
+  isModalOpen.value = false
+}
+
+
 </script>
 
 <template>
@@ -14,7 +29,13 @@ import Theme from '@/components/header/Theme.vue';
       <Emblem class="emblem"/>
       <p class="title_header">Производитель турецкого<br> трикотажного полотна</p>
       
-      <div class="basket"><img src="./../../assets/images/basket.png" alt=""></div>
+      <div class="basket"><img src="./../../assets/images/basket.png" alt="" @click="openModal"></div>
+
+      <Basket
+        v-if="isModalOpen"
+        :is-visible="isModalOpen"
+        @close="closeModal"
+        />
 
       <Profile class="profil_header"/>
 
@@ -28,6 +49,7 @@ import Theme from '@/components/header/Theme.vue';
 </template>
 
 <style scoped lang="scss">
+
 @use '@/assets/styles/mixins.scss' as *;
   .theme{
     @include tablet{

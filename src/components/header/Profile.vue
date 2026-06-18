@@ -1,11 +1,30 @@
 <template>
     <div class="profile_wrapper">
         <div class="image_profile"><img src="./../../assets/images/User.png" alt=""></div>
-        <span class="profile_title">Войти</span>
+        <span class="profile_title" @click="openModal">Войти</span>
+
+        <Login
+        v-if="isModalOpen"
+        :is-visible="isModalOpen"
+        @close="closeModal"
+        />
     </div>
 </template>
 
-<script>
+<script setup lang="ts">
+import Login from '@/components/modal/Login.vue'
+import { ref } from 'vue'
+
+
+const isModalOpen = ref<boolean>(false)
+
+const openModal = (): void => {
+  isModalOpen.value = true
+}
+
+const closeModal = (): void => {
+  isModalOpen.value = false
+}
 </script>
 
 <style scoped lang="scss">

@@ -181,7 +181,10 @@ h3 {
 
 .sert {
     width: 260px;
-    height: 350px;
+    height:
+
+
+350px;
     object-fit: cover;
     border-radius: 12px;
 
@@ -220,3 +223,5 @@ h3 {
     }
 }
 </style>
+
+

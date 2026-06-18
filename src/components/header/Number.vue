@@ -4,12 +4,30 @@
             <div><img src="./../../assets/images/Phone.png" alt="" class="number_image"></div>
             <span class="telephone">+90 212 547 08 26</span>
         </div>
-        <a href="#" class="link">Заказать звонок</a>
+        <a href="#" class="link" @click="openModal">Заказать звонок</a>
+        <Prise
+        v-if="isModalOpen"
+        :is-visible="isModalOpen"
+        @close="closeModal"
+        />
     </div>
     
 </template>
 
-<script>
+<script setup lang="ts">
+import Prise from '@/components/modal/Prise.vue'
+import { ref } from 'vue'
+
+
+const isModalOpen = ref<boolean>(false)
+
+const openModal = (): void => {
+  isModalOpen.value = true
+}
+
+const closeModal = (): void => {
+  isModalOpen.value = false
+}
 </script>
 
 <style scoped lang="scss">
