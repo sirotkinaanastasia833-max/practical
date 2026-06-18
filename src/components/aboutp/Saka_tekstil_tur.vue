@@ -1,7 +1,7 @@
 <template>
     <Container>
         <div class="tekstil">
-        <img src="./../../assets/images/Saka_tur.png" alt="">
+        <img src="./../../assets/images/Saka_tur.png" alt="" class="img_tek">
         <div class="tekstil_right">
             <p class="tekstil_title">
                 Saka Tekstil - производство и продажа <br>турецкого трикотажного полотна
@@ -27,10 +27,12 @@
                 <p class="tit_circle">30</p>
                 <p class="title_circle">Лет на рынке <br>текстиля</p>
                </div>
-            <div class="circle">
-                <img src="./../../assets/icons/queen.svg" alt="" class="circle_img">
-                <p class="tit_circle">40+</p>
-                <p class="title_circle">Ассортимент <br>товаров <br>в наличии</p>
+            <div class="circle_right">
+                <div class="circle">
+                    <img src="./../../assets/icons/queen.svg" alt="" class="circle_img">
+                    <p class="tit_circle">40+</p>
+                    <p class="title_circle">Ассортимент <br>товаров <br>в наличии</p>
+                </div>
             </div>
             <div class="circle">
                 <img src="./../../assets/icons/queen.svg" alt="" class="circle_img">
@@ -57,13 +59,10 @@ import Container from '../layout/Container.vue';
 .tekstil{
     display: flex;
     flex-wrap: nowrap;
-    // @include tablet {
-    //     padding-top: 100px;
-    //     max-width: 100%;
-    //     height: 1159px;
-    //     flex-direction: column-reverse;
-    //     }
-
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .tekstil_li{
@@ -74,6 +73,17 @@ import Container from '../layout/Container.vue';
 a{
     text-decoration: none;
     color: var(--dark-gold);
+}
+
+.img_tek{
+    @include tablet{
+        width: 339px;
+        height: 576px;
+    }
+    @include tablet{
+        width: 330px;
+        height: 576px;
+    }
 }
 
 .tekstil_right img{
@@ -92,11 +102,19 @@ a{
     font-size: var(--text-2xl);
     font-family: var(--font-family);
     font-weight: 500;
+    @include mobile{
+        font-size: var(--text-xl);
+        width: 300px;
+    }
 
 }
 .tekstil_li_title{
     margin-top: 15px;
     font-family: var(--font-family);
+    @include mobile{
+        font-size: var(--text-sm);
+        width: 300px;
+    }
 }
 
 
@@ -113,6 +131,10 @@ a{
 .tekstil_lit{
     margin-top: 15px;
     font-family: var(--font-family);
+    @include mobile{
+        font-size: var(--text-sm);
+        width: 300px;
+    }
 }
 
 .circle{
@@ -122,6 +144,10 @@ a{
     border-radius: 90px;
     text-align: center;
     margin-top: 40px;
+    @include tablet{
+        width: 180px;
+        height: 180px;
+    }
 }
 
 .title_circle{
@@ -145,5 +171,19 @@ a{
     display: flex;
     flex-wrap: nowrap;
     gap: 15px;
+    @include tablet{
+        display: flex;
+        justify-content: center;
+        z-index: 2;
+    }
+    @include mobile{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+}
+.circle_right{
+    padding-left: 100px;
 }
 </style>

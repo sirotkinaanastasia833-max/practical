@@ -1,49 +1,53 @@
 <template>
     <Container>
-        <div class="comment_wrapper">
-            <div class="tit_h3_btn">
-                <h3>Делаем все для того, чтобы вы остались <br>довольны нашей тканью</h3>
-                <div class="group_btn">
-                    <div 
-                        class="btn" 
-                        :class="{ active: activeBtn === 'left' }"
-                        @click="activeBtn = activeBtn === 'left' ? null : 'left'"
-                    >
-                       <img src="./../../assets/images/ArrowLeft.png" alt="">
+        <div class="container_wrapper_box">
+            <div class="comment_wrapper_box">
+                <div class="comment_wrapper">
+                    <div class="tit_h3_btn">
+                        <h3>Делаем все для того, чтобы вы остались <br>довольны нашей тканью</h3>
+                        <div class="group_btn">
+                            <div 
+                                class="btn" 
+                                :class="{ active: activeBtn === 'left' }"
+                                @click="activeBtn = activeBtn === 'left' ? null : 'left'"
+                            >
+                               <img src="./../../assets/images/ArrowLeft.png" alt="">
+                            </div>
+                            <div 
+                                class="btn" 
+                                :class="{ active: activeBtn === 'right' }"
+                                @click="activeBtn = activeBtn === 'right' ? null : 'right'"
+                            >
+                               <img src="./../../assets/images/ArrowRight.png" alt="">
+                            </div>
+                        </div>
                     </div>
-                    <div 
-                        class="btn" 
-                        :class="{ active: activeBtn === 'right' }"
-                        @click="activeBtn = activeBtn === 'right' ? null : 'right'"
-                    >
-                       <img src="./../../assets/images/ArrowRight.png" alt="">
+                    <div class="group_comment">
+                        <div class="comment">
+                            <p>Повседневная практика показывает, что <br>современная методология разработки <br>способствует повышению качества <br>благоприятных перспектив. Наше дело не так <br>однозначно, 
+                                как может показаться: высокое <br>качество позиционных исследований не даёт <br>нам иного выбора, кроме определения <br>глубокомысленных рассуждений. 
+                                Являясь <br>всего лишь частью общей картины, <br>акционеры крупнейших компаний, <br>превозмогая сложившуюся непростую <br>экономическую ситуацию, 
+                                превращены в <br>посмешище, хотя само их существование <br>приносит несомненную пользу обществу.
+                            </p>
+                            <div class="autor1">Наталья</div>
+                        </div>
+                        <div class="comment_box_second">
+                            <p>Повседневная практика показывает, что <br>современная методология разработки <br>способствует 
+                               повышению качества <br>благоприятных перспектив. Наше дело не так <br>однозначно, 
+                               как может показаться: высокое <br>качество позиционных исследований не даёт <br>нам иного выбора, кроме определения <br>глубокомысленных рассуждений. Являясь <br>всего лишь частью общей 
+                               картины, <br>акционеры крупнейших компаний, <br>превозмогая сложившуюся непростую <br>экономическую ситуацию
+                            </p>
+                            <div class="autor2">Василий</div>
+                        </div>
+                        <div class="comment_box">
+                            <p>Повседневная практика показывает, что <br>современная методология разработки 
+                                <br>способствует повышению качества <br>благоприятных перспектив. 
+                                Наше дело не так <br>однозначно, как может показаться: высокое <br>качество 
+                                позиционных исследований не даёт <br>нам иного выбора, кроме определения <br>глубокомысленных рассуждений. 
+                            </p>
+                            <div class="autor3">Геннадий</div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="group_comment">
-                <div class="comment">
-                    <p>Повседневная практика показывает, что <br>современная методология разработки <br>способствует повышению качества <br>благоприятных перспектив. Наше дело не так <br>однозначно, 
-                        как может показаться: высокое <br>качество позиционных исследований не даёт <br>нам иного выбора, кроме определения <br>глубокомысленных рассуждений. 
-                        Являясь <br>всего лишь частью общей картины, <br>акционеры крупнейших компаний, <br>превозмогая сложившуюся непростую <br>экономическую ситуацию, 
-                        превращены в <br>посмешище, хотя само их существование <br>приносит несомненную пользу обществу.
-                    </p>
-                    <div class="autor1">Наталья</div>
-                </div>
-                <div class="comment">
-                    <p>Повседневная практика показывает, что <br>современная методология разработки <br>способствует 
-                       повышению качества <br>благоприятных перспектив. Наше дело не так <br>однозначно, 
-                       как может показаться: высокое <br>качество позиционных исследований не даёт <br>нам иного выбора, кроме определения <br>глубокомысленных рассуждений. Являясь <br>всего лишь частью общей 
-                       картины, <br>акционеры крупнейших компаний, <br>превозмогая сложившуюся непростую <br>экономическую ситуацию
-                    </p>
-                    <div class="autor2">Василий</div>
-                </div>
-                <div class="comment">
-                    <p>Повседневная практика показывает, что <br>современная методология разработки 
-                        <br>способствует повышению качества <br>благоприятных перспектив. 
-                        Наше дело не так <br>однозначно, как может показаться: высокое <br>качество 
-                        позиционных исследований не даёт <br>нам иного выбора, кроме определения <br>глубокомысленных рассуждений. 
-                    </p>
-                    <div class="autor3">Геннадий</div>
                 </div>
             </div>
         </div>
@@ -52,14 +56,35 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-
 const activeBtn = ref<string | null>(null)
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/styles/mixins.scss' as *;
+.container_wrapper_box{
+    @include tablet{
+        display: flex;
+        justify-content: center;
+    }
+}
+.comment_wrapper_box{
+    display: flex;
+    justify-content: center;
+    @include tablet{
+        max-width: 698px;
+        max-height: 1200px;
+    }
+    @include mobile{
+        max-width: 360px;
+        max-height: 2604px;
+    }
+}
 h3{
     font-size: var(--text-2xl);
     font-weight: 800;
+    @include mobile{
+        font-size: var(--text-xl);
+    }
 }
 
 p{
@@ -75,6 +100,27 @@ p{
     height: 380px;
     background-color: var(--saka-color);
     border-radius: 30px;
+}
+.comment_box{
+    width: 360px;
+    height: 380px;
+    background-color: var(--saka-color);
+    border-radius: 30px;
+    @include tablet{
+        display: none;
+    }
+    @include mobile{
+        display: none;
+    }
+}
+.comment_box_second{
+    width: 360px;
+    height: 380px;
+    background-color: var(--saka-color);
+    border-radius: 30px;
+    @include mobile{
+        display: none;
+    }
 }
 
 .autor1{
@@ -102,6 +148,7 @@ p{
     display: flex;
     flex-wrap: nowrap;
     gap: 40px;
+    
 }
 
 .btn{
@@ -121,7 +168,6 @@ p{
     display: flex;
     flex-wrap: nowrap;
     gap: 10px;
-    margin-right: 325px;
     margin-top: 20px;
 }
 

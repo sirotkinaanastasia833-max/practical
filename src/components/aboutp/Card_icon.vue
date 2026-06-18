@@ -23,7 +23,7 @@ defineProps<{
 <style scoped lang="scss">
     .card_icon{
         background-color: var(--text-color);
-        width: 260px;
+        width: 220px;
         height: 337px;
         color: var(--text-color-black);
         padding: 0px 20px 0px 20px;
