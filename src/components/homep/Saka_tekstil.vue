@@ -165,7 +165,7 @@ a{
 
 .custom-button {
     width: 300px !important;
-    margin-top: 80px;
+    margin-top: 40px;
     
     @include tablet {
         margin-top: 40px;

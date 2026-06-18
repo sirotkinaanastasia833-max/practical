@@ -59,6 +59,7 @@ const selectColor = (color: ColorOption) => {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    color: var( --text-color-black);
 }
 
 .selected-display {

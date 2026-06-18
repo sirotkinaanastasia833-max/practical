@@ -48,6 +48,7 @@ const selectColor = (color: string) => {
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+    color: var( --text-color-black);
 }
 
 .dropdown-list {
