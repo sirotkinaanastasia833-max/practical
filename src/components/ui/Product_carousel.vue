@@ -3,7 +3,7 @@
         <Container><h3>Недавно просмотренные</h3></Container>
         <div class="products">
             <div class="arrow left" @click="prevSlide">
-                <img src="./../../assets/images/ArrowLeft.png" alt="">
+                <img src="./../../assets/images/ArrowRight.png" alt="">
             </div>
             
             <div class="products-wrapper">

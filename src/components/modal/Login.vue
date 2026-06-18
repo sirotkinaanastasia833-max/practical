@@ -60,7 +60,7 @@ const closeModal = (): void => {
     background: var(--saka-color);
     border-radius: 12px;
     padding: 30px;
-    width: 260px;
+    width: 310px;
     max-width: 90%;
 }
 .modal-header {
