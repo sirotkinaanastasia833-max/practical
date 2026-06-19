@@ -3,7 +3,7 @@
 
 <template>
     <RouterLink to="/" class="logo">
-        <img src="./../../assets/images/logo.svg" alt="Saka-Holding">
+        <img src="@/assets/images/logo.svg" alt="Saka-Holding">
     </RouterLink>  
 </template>
 
